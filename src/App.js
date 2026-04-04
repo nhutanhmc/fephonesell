@@ -1,5 +1,5 @@
  import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './App.scss';
 import './animations.css';
 import './header-effects.css';
 import './home-effects.css';
