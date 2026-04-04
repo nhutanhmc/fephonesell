@@ -23,20 +23,29 @@ class Product extends Component {
               <img
                 src={"data:image/jpg;base64," + item.image}
                 alt={item.name}
+                crossOrigin="anonymous"
               />
             </Link>
           </div>
           <div className="product-info">
+            <span className="product-category">{item.category?.name || "Product"}</span>
             <h5 className="product-name">{item.name}</h5>
+            <div className="product-rating">
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-half"></i>
+            </div>
             <div className="product-price">
-              <span className="price-current">${item.price}</span>
+              <span className="current">${item.price}</span>
             </div>
             <div className="product-actions">
-              <Link to={'/product/' + item._id} className="btn btn-view">
-                <i className="bi bi-eye"></i> View
+              <Link to={'/product/' + item._id} className="btn-add">
+                <i className="bi bi-bag-plus"></i> View
               </Link>
-              <button className="btn btn-cart" onClick={() => this.addToCart(item)}>
-                <i className="bi bi-cart-plus"></i> Cart
+              <button className="btn-wishlist" onClick={() => this.addToCart(item)} title="Add to cart">
+                <i className="bi bi-heart"></i>
               </button>
             </div>
           </div>
@@ -45,22 +54,29 @@ class Product extends Component {
     });
 
     return (
-      <div className="customer-container">
-        <div className="mb-4">
-          <h2 className="mb-3">
-            <i className="bi bi-bag"></i> Products
+      <section className="featured-products">
+        <div className="container-fluid">
+          <h2 style={{ marginBottom: 'var(--spacing-3xl)', paddingBottom: 'var(--spacing-lg)' }}>
+            <i className="bi bi-bag"></i> Explore Products
           </h2>
           {this.state.products.length === 0 && (
-            <div className="alert alert-info">
-              <i className="bi bi-info-circle"></i> No products found
+            <div style={{ 
+              background: '#fff3cd',
+              border: '1px solid #ffc107',
+              padding: 'var(--spacing-xl)',
+              borderRadius: 'var(--radius-lg)',
+              textAlign: 'center',
+              color: '#856404'
+            }}>
+              <i className="bi bi-info-circle"></i> No products found. Try a different search.
             </div>
           )}
-        </div>
 
-        <div className="products-grid">
-          {prods}
+          <div className="products-grid">
+            {prods}
+          </div>
         </div>
-      </div>
+      </section>
     );
   }
 
