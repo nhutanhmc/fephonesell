@@ -6,6 +6,8 @@ import './home-effects.css';
 import './product-detail-effects.css';
 import './scroll-effects.css';
 import './loading-animations.css';
+import './auth-forms.css';
+import './cart-styling.css';
 import React, { Component } from 'react';
 import Main from './components/MainComponent';
 import { BrowserRouter } from 'react-router-dom';
