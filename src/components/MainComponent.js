@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { initializeAllEffects, cleanupEffects } from "../utils/effectsUtils";
 
 import Menu from "./MenuComponent";
 import Inform from "./InformComponent";
@@ -14,6 +15,18 @@ import Mycart from "./MycartComponent";
 import Myorders from "./MyordersComponent";
 
 class Main extends Component {
+  componentDidMount() {
+    // Initialize all animations and effects
+    setTimeout(() => {
+      initializeAllEffects();
+    }, 100);
+  }
+
+  componentWillUnmount() {
+    // Cleanup effects
+    cleanupEffects();
+  }
+
   render() {
     return (
       <div className="body-customer">

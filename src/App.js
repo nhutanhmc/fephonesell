@@ -1,5 +1,11 @@
  import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import './animations.css';
+import './header-effects.css';
+import './home-effects.css';
+import './product-detail-effects.css';
+import './scroll-effects.css';
+import './loading-animations.css';
 import React, { Component } from 'react';
 import Main from './components/MainComponent';
 import { BrowserRouter } from 'react-router-dom';
