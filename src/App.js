@@ -1,6 +1,7 @@
  import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import './animations.css';
+import './luxury-header.css';
 import './header-effects.css';
 import './home-effects.css';
 import './product-detail-effects.css';
