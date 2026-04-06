@@ -13,6 +13,7 @@ import Login from "./LoginComponent";
 import Myprofile from "./MyprofileComponent";
 import Mycart from "./MycartComponent";
 import Myorders from "./MyordersComponent";
+import Footer from "./FooterComponent";
 
 class Main extends Component {
   componentDidMount() {
@@ -59,6 +60,7 @@ class Main extends Component {
             <Route path="/myorders" element={<Myorders />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     );
   }
