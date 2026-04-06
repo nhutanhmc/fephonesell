@@ -5,6 +5,7 @@ import './luxury-utilities.css';
 import './premium-pages.css';
 import './luxury-auth.css';
 import './luxury-cart.css';
+import './footer-styles.css';
 import './App.scss';
 import './animations.css';
 import './luxury-header.css';
